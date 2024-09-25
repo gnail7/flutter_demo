@@ -73,6 +73,7 @@ class LoginPage extends StatelessWidget {
     );
     String? ip = await getIpAddress();
     if (ip != null  && context.mounted) {
+      // 根据ip请求工位
       String pageName = await userProvider.getWorkerInfo(ip);
 
       pageName = '';
